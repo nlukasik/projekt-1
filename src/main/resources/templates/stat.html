@@ -25,15 +25,16 @@
                 {
                     label: "Population (millions)",
                     backgroundColor: [[${labels}]],
-                    data: [[${dataMap.values}]]
+                    data: [[${dataMap.values()}]]
                 }
             ]
         },
         options: {
             legend: { display: false },
-            title: {
-                display: true,
-                text: 'Predicted world population (millions) in 2050'
+            scales: {
+                yAxes: [{
+                    tickets: {beginAtZero: true}
+                }]
             }
         }
     });
